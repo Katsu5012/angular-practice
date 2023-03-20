@@ -26,10 +26,6 @@ import {RouterModule} from "@angular/router";
     BrowserAnimationsModule,
     MatSlideToggleModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path:'',component:ProductListComponent},
-      {path:'products/:productId',component:ProductDetailsComponent}
-    ])
   ],
   bootstrap: [AppComponent]
 })
