@@ -11,6 +11,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {RouterModule} from "@angular/router";
     TopBarComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
