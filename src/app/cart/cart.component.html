@@ -1,0 +1,21 @@
+<h3>Cart</h3>
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>についてはこちら
+</p>
+
+<div *ngIf="items.length !==0;else NoProduct">
+  <div  class="cart-item" *ngFor="let item of items">
+    <div class="cart-item" *ngFor="let item of items">
+      <span>{{ item.name }}</span>
+      <span>{{ item.price | currency }}</span>
+    </div>
+
+    <button type="button" (click)="removeItem(item.id)">delete</button>
+  </div>
+</div>
+
+<ng-template #NoProduct>
+  <h3>カートの中身は空です</h3>
+</ng-template>
+
+
