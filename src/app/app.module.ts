@@ -5,14 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import { CartComponent } from './cart/cart.component';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CartComponent } from './pages/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ShippingComponent } from './shipping/shipping.component';
+import { ShippingComponent } from './pages/shipping/shipping.component';
+import { LifeCycleComponent } from './pages/life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    LifeCycleComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,6 @@ import { ShippingComponent } from './shipping/shipping.component';
     MatSlideToggleModule,
     ReactiveFormsModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
