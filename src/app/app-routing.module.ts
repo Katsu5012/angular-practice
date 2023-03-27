@@ -5,6 +5,7 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { CartComponent } from './pages/cart/cart.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
 import { LifeCycleComponent } from './pages/life-cycle/life-cycle.component';
+import {D3Component} from "./pages/d3/d3.component";
 
 const routes: Routes = [
   { path: '', component: ProductListComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'shipping', component: ShippingComponent },
   { path: 'life-cycle', component: LifeCycleComponent },
+  {path:'d3',component:D3Component}
 ];
 
 @NgModule({
