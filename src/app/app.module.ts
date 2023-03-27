@@ -14,6 +14,10 @@ import { CartComponent } from './pages/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './pages/shipping/shipping.component';
 import { LifeCycleComponent } from './pages/life-cycle/life-cycle.component';
+import { BarComponent } from './components/bar/bar.component';
+import { PieComponent } from './components/pie/pie.component';
+import { ScatterComponent } from './components/scatter/scatter.component';
+import { D3Component } from './pages/d3/d3.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { LifeCycleComponent } from './pages/life-cycle/life-cycle.component';
     CartComponent,
     ShippingComponent,
     LifeCycleComponent,
+    BarComponent,
+    PieComponent,
+    ScatterComponent,
+    D3Component,
   ],
   imports: [
     BrowserModule,
