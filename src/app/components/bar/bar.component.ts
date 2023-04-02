@@ -9,6 +9,7 @@ type BarDataType={Framework:string,Stars:number,Released:number}
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss']
 })
+// TODO: refactor
 export class BarComponent implements OnInit{
   private data:BarDataType[]= [
     {"Framework": "Vue", "Stars": 166443, "Released": 2014},
@@ -17,7 +18,9 @@ export class BarComponent implements OnInit{
     {"Framework": "Backbone", "Stars": 27647, "Released": 2010},
     {"Framework": "Ember", "Stars": 21471, "Released": 2011},
   ];
-  private svg: any;
+  private data2=[1,2,3,4,5]
+  private svg!: any;
+  private svg2!:any;
   private margin = 100;
   private width = 800 - (this.margin * 2);
   private height = 400 - (this.margin * 2);
@@ -25,6 +28,7 @@ export class BarComponent implements OnInit{
   ngOnInit(): void {
     this.createSvg();
     this.drawBars(this.data);
+    this.createBar2()
   }
 
   private createSvg(): void {
@@ -38,6 +42,12 @@ export class BarComponent implements OnInit{
       .append("g")
       // g要素に対して.attr()でtransformを指定
       .attr("transform", "translate(" + this.margin + "," + this.margin + ")");
+  }
+
+  private createBar2():void{
+    this.svg2=d3.select('#bar2')
+
+    this.svg2.selectAll('p').data(this.data2).enter().append('p').text((d:number)=>d)
   }
 
   private drawBars(data: BarDataType[]): void {
@@ -75,7 +85,5 @@ export class BarComponent implements OnInit{
       .attr("width", x.bandwidth())
       .attr("height", (d: BarDataType) => this.height - y(d.Stars))
       .attr("fill", "gray");
-
-    console.log(this.svg.append('text').attr('x',10).attr('y',5).text((d:BarDataType)=>d.Stars))
   }
 }
