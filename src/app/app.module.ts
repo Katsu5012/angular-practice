@@ -18,6 +18,7 @@ import { BarComponent } from './components/bar/bar.component';
 import { PieComponent } from './components/pie/pie.component';
 import { ScatterComponent } from './components/scatter/scatter.component';
 import { D3Component } from './pages/d3/d3.component';
+import { LinesComponent } from './components/lines/lines.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { D3Component } from './pages/d3/d3.component';
     PieComponent,
     ScatterComponent,
     D3Component,
+    LinesComponent,
   ],
   imports: [
     BrowserModule,
