@@ -47,7 +47,13 @@ export class BarComponent implements OnInit{
   private createBar2():void{
     this.svg2=d3.select('#bar2')
 
-    this.svg2.selectAll('p').data(this.data2).enter().append('p').text((d:number)=>d)
+    this.svg2.selectAll('p').data(this.data2).enter().append('p').text((d:number)=>d).style("color",(d:number)=>{
+      if(d>3){
+        return 'red'
+      }else{
+        return 'blue'
+      }
+    })
   }
 
   private drawBars(data: BarDataType[]): void {
