@@ -19,6 +19,7 @@ import { PieComponent } from './components/pie/pie.component';
 import { ScatterComponent } from './components/scatter/scatter.component';
 import { D3Component } from './pages/d3/d3.component';
 import { LinesComponent } from './components/lines/lines.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LinesComponent } from './components/lines/lines.component';
     ScatterComponent,
     D3Component,
     LinesComponent,
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,

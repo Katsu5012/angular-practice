@@ -28,7 +28,7 @@ export class BarComponent implements OnInit{
   ngOnInit(): void {
     this.createSvg();
     this.drawBars(this.data);
-    this.createBar2()
+    this.createTexts()
   }
 
   private createSvg(): void {
@@ -44,7 +44,7 @@ export class BarComponent implements OnInit{
       .attr("transform", "translate(" + this.margin + "," + this.margin + ")");
   }
 
-  private createBar2():void{
+  private createTexts():void{
     this.svg2=d3.select('#bar2')
 
     this.svg2.selectAll('p').data(this.data2).enter().append('p').text((d:number)=>d).style("color",(d:number)=>{
