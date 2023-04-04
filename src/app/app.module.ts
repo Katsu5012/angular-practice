@@ -20,6 +20,7 @@ import { ScatterComponent } from './components/scatter/scatter.component';
 import { D3Component } from './pages/d3/d3.component';
 import { LinesComponent } from './components/lines/lines.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { CircleComponent } from './components/circle/circle.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     D3Component,
     LinesComponent,
     NotFoundPageComponent,
+    CircleComponent,
   ],
   imports: [
     BrowserModule,
