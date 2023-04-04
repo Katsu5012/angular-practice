@@ -61,7 +61,9 @@ export class BarComponent implements OnInit{
     const x = d3.scaleBand()
       .range([0, this.width])
       .domain(data.map(d => d.Framework))
-      .padding(0.1);
+      .padding(0.3);
+
+    console.log(x)
 
     // Draw the X-axis on the DOM
     this.svg.append("g")
@@ -74,7 +76,7 @@ export class BarComponent implements OnInit{
     // Create the Y-axis band scale
     const y = d3.scaleLinear()
       .domain([0, 200000])
-      .range([this.height, 0]);
+      .range([this.height,0]);
 
     // Draw the Y-axis on the DOM
     this.svg.append("g")
@@ -90,6 +92,16 @@ export class BarComponent implements OnInit{
       .attr("y", (d: BarDataType) => y(d.Stars))
       .attr("width", x.bandwidth())
       .attr("height", (d: BarDataType) => this.height - y(d.Stars))
-      .attr("fill", "gray");
+      .attr("fill", "red")
+
+    this.svg.selectAll("bars")
+      .data(data)
+      .enter()
+      .append("text")
+      .attr("x", (d: BarDataType) =>{return  x(d.Framework)})
+      .attr("y", (d: BarDataType) => y(d.Stars)-5)
+      .text((d:BarDataType)=>d.Stars)
   }
+
+
 }
