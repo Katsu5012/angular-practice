@@ -9,6 +9,7 @@ type BarDataType={Framework:string,Stars:number,Released:number}
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss']
 })
+
 // TODO: refactor
 export class BarComponent implements OnInit{
   private data:BarDataType[]= [
@@ -44,7 +45,7 @@ export class BarComponent implements OnInit{
       .attr("transform", "translate(" + this.margin + "," + this.margin + ")");
   }
 
-  private createTexts():void{
+  private createTexts(): void {
     this.svg2=d3.select('#bar2')
 
     this.svg2.selectAll('p').data(this.data2).enter().append('p').text((d:number)=>d).style("color",(d:number)=>{
@@ -62,8 +63,6 @@ export class BarComponent implements OnInit{
       .range([0, this.width])
       .domain(data.map(d => d.Framework))
       .padding(0.3);
-
-    console.log(x)
 
     // Draw the X-axis on the DOM
     this.svg.append("g")
@@ -102,6 +101,4 @@ export class BarComponent implements OnInit{
       .attr("y", (d: BarDataType) => y(d.Stars)-5)
       .text((d:BarDataType)=>d.Stars)
   }
-
-
 }
