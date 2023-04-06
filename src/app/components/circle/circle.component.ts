@@ -6,6 +6,7 @@ import * as d3 from 'd3';
   templateUrl: './circle.component.html',
   styleUrls: ['./circle.component.scss']
 })
+
 export class CircleComponent implements OnInit{
   private data=[5,10,15,20,25]
   private svg!: any;
@@ -25,7 +26,8 @@ export class CircleComponent implements OnInit{
 
   private drawCircle():void{
     // TODO: 横幅が均等になるようにcxを再計算する
-    this.svg.selectAll('circle')
+    this.svg
+      .selectAll('circle')
       .data(this.data)
       .enter()
       .append("circle")
